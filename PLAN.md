@@ -4,6 +4,7 @@
 
 This document outlines the implementation plan for a .NET CLI tool that documents Microsoft Dataverse solutions. The tool extracts metadata and produces human/machine readable outputs for architects, developers, and DevOps pipelines.
 
+Use Test Driven Development approach so the tests are written first before the code.
 ---
 
 ## Phase 1: Project Foundation
