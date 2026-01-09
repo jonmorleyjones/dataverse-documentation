@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- Global Tool Configuration -->
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>dataverse-doc</ToolCommandName>
+    <PackageId>DataverseDoc</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Dataverse Documentation Team</Authors>
+    <Description>CLI tool for documenting Microsoft Dataverse solutions</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+
+    <!-- Self-contained publish settings -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataverseDoc.Core\DataverseDoc.Core.csproj" />
+    <ProjectReference Include="..\DataverseDoc.Dataverse\DataverseDoc.Dataverse.csproj" />
+    <ProjectReference Include="..\DataverseDoc.Renderers\DataverseDoc.Renderers.csproj" />
+  </ItemGroup>
+
+</Project>

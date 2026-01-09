@@ -1,0 +1,121 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+nuget.exe
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# NCrunch
+*.ncrunch*
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Dotcover
+*.dotCover
+
+# JustCode
+.JustCode
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+
+# NuGet Package Restore
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# MSBuild Binary and Structured Log
+*.binlog
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Windows
+[Tt]humbs.db
+*.lnk
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# Publish profiles
+/Properties/PublishProfiles/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Backup files
+*.bak
+
+# Development environment variables
+.env
+.env.local
+.env.*.local
+*.secrets.json
+appsettings.Development.json
+
+# Local tool installations
+/.tools/
