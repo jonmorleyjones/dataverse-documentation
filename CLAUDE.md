@@ -223,3 +223,9 @@ You can extract metadata for all listed features.
 You can generate valid Mermaid diagrams.
 You can run the tool in Azure DevOps.
 You can export outputs in structured formats.
+
+For powershell use this module  Microsoft.Xrm.Tooling.CrmConnector.PowerShell
+If you need more like using WEBAPI use 
+https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/use-web-api-metadata
+https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/create-update-optionsets
+https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/web-api-metadata-operations-sample
