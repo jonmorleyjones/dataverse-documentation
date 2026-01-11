@@ -23,7 +23,7 @@ public static class FlowDiagramCommand
         command.AddOption(solutionOption);
         command.AddOption(flowOption);
 
-        command.SetHandler(async (context) =>
+        command.SetHandler((context) =>
         {
             var solution = context.ParseResult.GetValueForOption(solutionOption);
             var flow = context.ParseResult.GetValueForOption(flowOption);

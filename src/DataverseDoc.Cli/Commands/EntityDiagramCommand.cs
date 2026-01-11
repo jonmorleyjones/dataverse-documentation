@@ -27,7 +27,7 @@ public static class EntityDiagramCommand
         command.AddOption(entityOption);
         command.AddOption(depthOption);
 
-        command.SetHandler(async (context) =>
+        command.SetHandler((context) =>
         {
             var entity = context.ParseResult.GetValueForOption(entityOption)!;
             var depth = context.ParseResult.GetValueForOption(depthOption);

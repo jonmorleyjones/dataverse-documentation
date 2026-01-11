@@ -21,7 +21,7 @@ public static class SecurityRolesCommand
 
         command.AddOption(solutionOption);
 
-        command.SetHandler(async (context) =>
+        command.SetHandler((context) =>
         {
             var solution = context.ParseResult.GetValueForOption(solutionOption)!;
 
