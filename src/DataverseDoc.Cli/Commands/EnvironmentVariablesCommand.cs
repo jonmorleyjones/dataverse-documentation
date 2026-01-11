@@ -24,10 +24,13 @@ public static class EnvironmentVariablesCommand
         command.SetHandler(async (context) =>
         {
             var solution = context.ParseResult.GetValueForOption(solutionOption)!;
-            var output = context.ParseResult.GetValueForOption(
-                context.ParseResult.CommandResult.Command.Parents
-                    .First().Options.First(o => o.Name == "output") as Option<string>)
-                ?? "table";
+
+            // Get global output option from root command
+            var rootCommand = context.ParseResult.RootCommandResult.Command;
+            var outputOption = rootCommand.Options.FirstOrDefault(o => o.Name == "output") as Option<string>;
+            var output = outputOption != null
+                ? context.ParseResult.GetValueForOption(outputOption) ?? "table"
+                : "table";
 
             // TODO: Implement actual data retrieval
             Console.WriteLine($"Listing environment variables for solution: {solution}");
