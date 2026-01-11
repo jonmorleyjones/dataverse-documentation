@@ -196,9 +196,18 @@ public class MsalAuthenticationService : IAuthenticationService
 
         try
         {
-            var certificate = string.IsNullOrWhiteSpace(password)
-                ? new X509Certificate2(certificatePath)
-                : new X509Certificate2(certificatePath, password);
+            X509Certificate2 certificate;
+
+            if (string.IsNullOrWhiteSpace(password))
+            {
+                // Try loading as PEM/CER first, then as PKCS12
+                certificate = X509CertificateLoader.LoadCertificateFromFile(certificatePath);
+            }
+            else
+            {
+                // Load as PKCS12/PFX with password
+                certificate = X509CertificateLoader.LoadPkcs12FromFile(certificatePath, password);
+            }
 
             _logger.LogDebug("Certificate loaded successfully. Subject: {Subject}", certificate.Subject);
             return certificate;
